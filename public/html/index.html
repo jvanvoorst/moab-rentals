@@ -1,4 +1,5 @@
 <html ng-app="myApp">
+
 <head>
 	<title>Moab Rentals</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
@@ -7,12 +8,37 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
-<body ng-controller="mainController">
-	<div class="background">
-		<div>
-			<div class="bar"></div>
+
+<body class="background" ng-controller="mainController">
+
+		<!-- Header -->
+		<div class="row">
+			<div class="bar bar-header">
+				<div class="buttons-container">
+					<a href="#">ShortStay</a>
+					<a href="#">Long Stay</a>
+					<a href="#">Contact</a>
+				</div>
+				<a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
+			</div>
 			<p class="title">Moab Rentals</p>
 		</div>
-	</div>
+
+		<!-- Angular View -->
+		<div class="view"></div>
+
+		<!-- Footer -->
+		<div class="row">
+			<div class="bar bar-footer">
+				<p>© 2015 by Moab Rentals</p>
+				<div class="buttons-container">
+					<a href="#">ShortStay</a>
+					<a href="#">Long Stay</a>
+					<a href="#">Contact</a>
+				</div>
+			</div>
+		</div>
+
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 .background {
-	background: url('../images/LasSals-crop.jpg') bottom right no-repeat;
+	background: url('../images/LasSals-crop.jpg') top left no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
@@ -7,16 +7,71 @@
 
 .title {
 	font-family: Zapfino;
-	font-size: 64px;
+	font-size: 4vw;
 	color: #404B5D;
 	letter-spacing: 13.71px;
-	padding-top: 1em;
+	position: absolute;
+	top: 6vw;
+	left: 10px;
 }
 .bar {
 	background: #907672;
 	box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.50);
-	height: 100px;
+	height: 4vw;
 	position: relative;
-	top: 100px;
+	line-height: 4vw;
+}
+.bar-header {
+	top: 9vw;
+}
+.bar-footer {
+	bottom: 40px;
+}
+.bar-footer p  {
+	 display: inline;
 }
 
+.buttons-container a {
+	font-family: ArialMT;
+	font-size: 1.25vw;
+	color: #8F92AB;
+	letter-spacing: 1.91px;
+	padding-right: 7vw;
+}
+.buttons-container {
+	position: absolute;
+	right: 0px;
+	vertical-align: middle;
+}
+.hamburger {
+	display: none;
+}
+
+/*Display hamburger on displays below 767px*/
+@media only screen and (max-width: 767px) {
+	.buttons-container a {
+		display: none;
+	}
+	.hamburger {
+		display: inline;
+		max-height: 100%;  
+	    max-width: 100%; 
+	    width: auto;
+	    height: auto;
+	    position: absolute;  
+	    top: 0;  
+	    bottom: 0;  
+	    right: 20px;  
+	    margin: auto;
+	}
+	.bar {
+		height: 8vw;
+	}
+	.title {
+		font-size: 5vw;
+	}
+}
+
+.view {
+	height: 1000px;
+}
