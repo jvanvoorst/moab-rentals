@@ -27,16 +27,17 @@
 .bar-footer {
 	bottom: 40px;
 }
-.bar-footer p  {
-	 display: inline;
+.bar-footer span {
+	padding-left: 5px;
 }
 
-.buttons-container a {
+.buttons {
 	font-family: ArialMT;
 	font-size: 1.25vw;
 	color: #8F92AB;
 	letter-spacing: 1.91px;
 	padding-right: 7vw;
+	float: right;
 }
 .buttons-container {
 	position: absolute;
@@ -49,19 +50,19 @@
 
 /*Display hamburger on displays below 767px*/
 @media only screen and (max-width: 767px) {
-	.buttons-container a {
+	.buttons {
 		display: none;
 	}
 	.hamburger {
 		display: inline;
-		max-height: 100%;  
-	    max-width: 100%; 
+		max-height: 100%;
+	    max-width: 100%;
 	    width: auto;
 	    height: auto;
-	    position: absolute;  
-	    top: 0;  
-	    bottom: 0;  
-	    right: 20px;  
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    right: 20px;
 	    margin: auto;
 	}
 	.bar {
