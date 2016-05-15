@@ -4,32 +4,42 @@
 <head>
 	<title>Moab Rentals</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="background" ng-controller="mainController">
+<body ng-controller="mainController">
 
 		<!-- Header -->
-		<div class="bar bar-header">
-			<a class="buttons" href="#">ShortStay</a>
-			<a class="buttons" href="#">Long Stay</a>
-			<a class="buttons" href="#">Contact</a>
-			<a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
-		</div>
-		<p class="title">Moab Rentals</p>
+		<div class="background">
+			<div class="header">
+				<div class="bar bar-header">
+					<a class="buttons" href="#">ShortStay</a>
+					<a class="buttons" href="#">Long Stay</a>
+					<a class="buttons" href="#">Contact</a>
+					<a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
+				</div>
+				<p class="title">Moab Rentals</p>
+			</div>
 
-		<!-- Angular View -->
-		<div class="view"></div>
+			<!-- Angular View -->
+			<div ng-view></div>
 
-		<!-- Footer -->
-		<div class="bar bar-footer">
-			<span>&copy; 2015 by Moab Rentals</span>
-			<a class="buttons" href="#">ShortStay</a>
-			<a class="buttons" href="#">Long Stay</a>
-			<a class="buttons" href="#">Contact</a>
+			<!-- Footer -->
+			<div class="footer">
+				<div class="bar bar-footer">
+					<span>&copy; 2015 by Moab Rentals</span>
+					<a class="buttons" href="#">ShortStay</a>
+					<a class="buttons" href="#">Long Stay</a>
+					<a class="buttons" href="#">Contact</a>
+				</div>
+			</div>
+
 		</div>
 
 </body>

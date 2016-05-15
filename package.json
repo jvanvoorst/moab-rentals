@@ -1,0 +1,22 @@
+{
+  "name": "moab-rentals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "moabApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvanvoorst/moab-rentals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvanvoorst/moab-rentals/issues"
+  },
+  "homepage": "https://github.com/jvanvoorst/moab-rentals#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
