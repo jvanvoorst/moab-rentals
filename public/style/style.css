@@ -2,10 +2,9 @@
 	background: url('../images/LasSals-crop.jpg') top left no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 1286px;
+	height: 1800px;
 	position: absolute;
 }
-
 .title {
 	font-family: Zapfino;
 	font-size: 4vw;
@@ -18,6 +17,11 @@
 .header {
 	height: 11vw;
 }
+.footer {
+	bottom: 40px;
+	position: absolute;
+	width: 100%;
+}
 .bar {
 	background: #907672;
 	box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.50);
@@ -28,15 +32,9 @@
 .bar-header {
 	top: 7vw;
 }
-.footer {
-	bottom: 40px;
-	position: absolute;
-	width: 100%;
-}
 .bar-footer span {
 	padding-left: 1vw;
 }
-
 .buttons {
 	font-family: ArialMT;
 	font-size: 1.25vw;
@@ -53,6 +51,8 @@
 .hamburger {
 	display: none;
 }
+
+/* Welcome view -----------------------------------------------------*/
 .quote {
 	font-family: Arial-ItalicMT;
 	font-size: 23px;
@@ -67,7 +67,7 @@
 	letter-spacing: 0;
 }
 .welcome-box {
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.4);
 	border-radius: 25px;
 	margin-top: 15vw;
 }
@@ -85,6 +85,33 @@
 	color: #FFFFFF;
 	letter-spacing: 1px;
 	padding: 1vw;
+}
+.view-container {
+	position: absolute;
+}
+
+/* Views shared ------------------------------------------------------*/
+.heading-views {
+	font-family: CherryCreamSoda;
+	font-size: 3vw;
+	color: #43312F;
+	letter-spacing: 3.39px;
+	text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+	position: relative;
+	top: 44px;
+}
+.container-views {
+	width: 80%;
+	position: relative;
+}
+
+/* short stay view ----------------------------------------------------*/
+.container-short-background {
+	background: #E2E3DE;
+}
+.container-short-desc {
+	padding-top: 10px;
+	font-size: 14px;
 }
 
 /*Display hamburger on displays below 767px*/
@@ -112,6 +139,10 @@
 	}
 	.header {
 		height: 16vw;
+	}
+	.heading-views {
+		font-size: 9vw;
+		top: 37px;
 	}
 }
 
