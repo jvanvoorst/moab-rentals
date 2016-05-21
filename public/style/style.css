@@ -1,151 +1,158 @@
 .background {
-	background: url('../images/LasSals-crop.jpg') top left no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 1800px;
-	position: absolute;
+    background: url('../images/LasSals-crop.jpg') top left no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1800px;
+    position: absolute;
 }
 .title {
-	font-family: Zapfino;
-	font-size: 4vw;
-	color: #404B5D;
-	letter-spacing: 13.71px;
-	position: absolute;
-	top: 4vw;
-	left: 10px;
+    font-family: Zapfino;
+    font-size: 4vw;
+    color: #404B5D;
+    letter-spacing: 13.71px;
+    position: absolute;
+    top: 4vw;
+    left: 10px;
 }
 .header {
-	height: 11vw;
+    height: 11vw;
 }
 .footer {
-	bottom: 40px;
-	position: absolute;
-	width: 100%;
+    bottom: 40px;
+    position: absolute;
+    width: 100%;
 }
 .bar {
-	background: #907672;
-	box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.50);
-	height: 4vw;
-	position: relative;
-	line-height: 4vw;
+    background: #907672;
+    box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.50);
+    height: 4vw;
+    position: relative;
+    line-height: 4vw;
 }
 .bar-header {
-	top: 7vw;
+    top: 7vw;
 }
 .bar-footer span {
-	padding-left: 1vw;
+    padding-left: 1vw;
 }
 .buttons {
-	font-family: ArialMT;
-	font-size: 1.25vw;
-	color: #A7B8C3;
-	letter-spacing: 1.91px;
-	padding-right: 7vw;
-	float: right;
+    font-family: ArialMT;
+    font-size: 1.25vw;
+    color: #A7B8C3;
+    letter-spacing: 1.91px;
+    padding-right: 7vw;
+    float: right;
 }
 .buttons-container {
-	position: absolute;
-	right: 0;
-	vertical-align: middle;
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
 }
 .hamburger {
-	display: none;
+    display: none;
 }
 
 /* Welcome view -----------------------------------------------------*/
 .quote {
-	font-family: Arial-ItalicMT;
-	font-size: 23px;
-	color: #181818;
-	letter-spacing: 1.7px;
-	padding-top: 7vw;
+    font-family: Arial-ItalicMT;
+    font-size: 23px;
+    color: #181818;
+    letter-spacing: 1.7px;
+    padding-top: 7vw;
 }
 .author {
-	font-family: Georgia;
-	font-size: 23px;
-	color: #181818;
-	letter-spacing: 0;
+    font-family: Georgia;
+    font-size: 23px;
+    color: #181818;
+    letter-spacing: 0;
 }
 .welcome-box {
-	background: rgba(255, 255, 255, 0.4);
-	border-radius: 25px;
-	margin-top: 15vw;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+    margin-top: 15vw;
 }
 .welcome-box-heading {
-	font-family: Arial-BoldMT;
-	font-size: 2em;
-	color: #404B5D;
-	letter-spacing: 7.71px;
-	padding-top: 1.5vw;
-	text-align: center;
+    font-family: Arial-BoldMT;
+    font-size: 2em;
+    color: #404B5D;
+    letter-spacing: 7.71px;
+    padding-top: 1.5vw;
+    text-align: center;
 }
 .welcome-box p {
-	font-family: ArialMT;
-	font-size: 1em;
-	color: #FFFFFF;
-	letter-spacing: 1px;
-	padding: 1vw;
+    font-family: ArialMT;
+    font-size: 1em;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    padding: 1vw;
 }
 .view-container {
-	position: absolute;
+    position: absolute;
 }
 
 /* Views shared ------------------------------------------------------*/
 .heading-views {
-	font-family: CherryCreamSoda;
-	font-size: 3vw;
-	color: #43312F;
-	letter-spacing: 3.39px;
-	text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
-	position: relative;
-	top: 44px;
+    font-family: CherryCreamSoda;
+    font-size: 3vw;
+    color: #43312F;
+    letter-spacing: 3.39px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+    position: relative;
+    top: 44px;
 }
 .container-views {
-	width: 80%;
-	position: relative;
+    width: 80%;
+    position: relative;
 }
 
 /* short stay view ----------------------------------------------------*/
 .container-short-background {
-	background: #E2E3DE;
+    background: #E2E3DE;
 }
 .container-short-desc {
-	padding-top: 10px;
-	font-size: 14px;
+    padding-top: 10px;
+    font-size: 14px;
 }
 
 /*Display hamburger on displays below 767px*/
 @media only screen and (max-width: 767px) {
-	.buttons {
-		display: none;
-	}
-	.hamburger {
-		display: inline;
-		max-height: 100%;
-	    max-width: 100%;
-	    width: auto;
-	    height: auto;
-	    position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    right: 20px;
-	    margin: auto;
-	}
-	.bar {
-		height: 8vw;
-	}
-	.title {
-		font-size: 5vw;
-	}
-	.header {
-		height: 16vw;
-	}
-	.heading-views {
-		font-size: 9vw;
-		top: 37px;
-	}
+    .buttons {
+        display: none;
+    }
+    .hamburger {
+        display: inline;
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+    }
+    .bar {
+        height: 8vw;
+    }
+    .title {
+        font-size: 5vw;
+    }
+    .header {
+        height: 16vw;
+    }
+    .heading-views {
+        font-size: 9vw;
+        top: 37px;
+    }
 }
 
 .view {
-	height: 1000px;
+    height: 1000px;
 }
+
+/* Carousel ------------------------------------------------------------*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
