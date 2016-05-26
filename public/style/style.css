@@ -113,6 +113,14 @@
     padding-top: 10px;
     font-size: 14px;
 }
+.photo-carousel {
+    margin: auto;
+    width: 100%;
+}
+.container-photo {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /*Display hamburger on displays below 767px*/
 @media only screen and (max-width: 767px) {
