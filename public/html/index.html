@@ -18,10 +18,11 @@
 
 <body ng-controller="mainCntrl">
 
-		<!-- Header -->
 		<div class="background">
-			<div class="header">
-				<div class="bar bar-header">
+
+			<!-- Header -->
+			<div class="nav-header">
+				<div class="nav-bar nav-bar-header">
 					<a class="buttons" href="#/short">Short Stay</a>
 					<a class="buttons" href="#/long">Long Stay</a>
 					<a class="buttons" href="#/contact">Contact</a>
@@ -31,16 +32,14 @@
 			</div>
 
 			<!-- Angular View -->
-			<div ng-view></div>
+			<div ng-view class="container"></div>
 
 			<!-- Footer -->
-			<div class="footer">
-				<div class="bar bar-footer">
-					<span>&copy; 2015 by Moab Rentals</span>
-					<a class="buttons" href="#">ShortStay</a>
-					<a class="buttons" href="#">Long Stay</a>
-					<a class="buttons" href="#">Contact</a>
-				</div>
+			<div class="nav-bar nav-bar-footer">
+				<span>&copy; 2015 by Moab Rentals</span>
+				<a class="buttons" href="#">ShortStay</a>
+				<a class="buttons" href="#">Long Stay</a>
+				<a class="buttons" href="#">Contact</a>
 			</div>
 
 		</div>

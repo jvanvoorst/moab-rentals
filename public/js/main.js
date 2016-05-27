@@ -9,11 +9,8 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/short', {
         templateUrl: 'html/short.html',
         controller: 'mainCntrl'
-    })
-    .when('/short-photos', {
-        templateUrl: 'html/short-carousel.html',
-        controller: 'carouselCntrl'
     });
+
 }]);
 
 
@@ -22,12 +19,15 @@ app.controller('mainCntrl', ['$scope', function($scope) {
 
 }]);
 
+// Controller for photo carousel on both short stay and long term views
 app.controller('carouselCntrl', ['$scope', function($scope) {
 
+    // slide auto rotation interval in seconds, 0 for no rotate
     $scope.myInterval = 0;
+    // wrap slides false = yes
     $scope.noWrapSlides = false;
+    // index of initial slide to display
     $scope.active = 0;
-    var currIndex = 0;
 
     $scope.slides = [
         {
@@ -37,7 +37,7 @@ app.controller('carouselCntrl', ['$scope', function($scope) {
         },
         {
         image: '../images/livingroom-crop.jpg',
-        text: 'Awesome photograph',
+        text: 'slide #2',
         id: 1
         },
         {
