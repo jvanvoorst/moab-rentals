@@ -2,47 +2,157 @@
 <html ng-app="myApp" lang="en">
 
 <head>
-	<title>Moab Rentals</title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-touch.min.js"></script>
+    <title>Moab Rentals</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-touch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
-	<script type="text/javascript" src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300|Roboto:400,300' rel='stylesheet' type='text/css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/reset.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body ng-controller="mainCntrl">
+<body>
 
-		<div class="background">
+        <header class="mr-header">
 
-			<!-- Header -->
-			<div class="nav-header">
-				<div class="nav-bar nav-bar-header">
-					<a class="buttons" href="#/short">Short Stay</a>
-					<a class="buttons" href="#/long">Long Stay</a>
-					<a class="buttons" href="#/contact">Contact</a>
-					<a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
-				</div>
-				<p class="title">Moab Rentals</p>
-			</div>
+            <div class="nav-bar">
+                <a class="nav-links" href="#/short">Short Stay</a>
+                <a class="nav-links" href="#/long">Long Stay</a>
+                <a class="nav-links" href="#/contact">Contact</a>
+            </div>
 
-			<!-- Angular View -->
-			<div ng-view class="container"></div>
+            <p class="title">Moab Rentals</p>
 
-			<!-- Footer -->
-			<div class="nav-bar nav-bar-footer">
-				<span>&copy; 2015 by Moab Rentals</span>
-				<a class="buttons" href="#">ShortStay</a>
-				<a class="buttons" href="#">Long Stay</a>
-				<a class="buttons" href="#">Contact</a>
-			</div>
+        </header>
 
-		</div>
+        <main class="main-content">
+
+            <div class="bg-fixed">
+                <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
+                <h1>Short Term Rental</h1>
+                <img class="chevron" src="../images/chevron.svg">
+            </div>
+
+            <div class="bg-scrolling color-1">
+                <div class="container">
+                    <hr>
+                    <div class="row">
+                        <p class="col-md-2">Space</p>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Accomodates: 10</li>
+                                <li>Bedrooms: 3</li>
+                                <li>Bathrooms: 2</li>
+                                <li>Beds: 3</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Checkin: 4:00pm</li>
+                                <li>Checkout: 10:00am</li>
+                                <li>Property: Condominium</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p class="col-md-2">Amenities</p>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Kitchen</li>
+                                <li>Wifi</li>
+                                <li>Flat Screen TV - Netflix</li>
+                                <li>Air Conditioning</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Washer - Dryer</li>
+                                <li>Fireplace</li>
+                                <li>Iron - Hairdryer</li>
+                                <li>Patio</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p class="col-md-2">Description</p>
+                        <div class="col-md-8">
+                            <p>Newly built condo only 5 miles south of downtown Moab. Close to Arches and Canyonlands National Parks, Dead Horse State Park, the Sand Flats Recreational Area area, as well as numerous other amazing outdoor areas.</p>
+                            <p>There are 3 bedrooms; one with a king bed, and 2 with queen beds. There is also a queen sized pull out sofa, as well as 2 cots, and a pack 'n play. There are two bathrooms, a laundry room with washer and dryer, and a fully furnished kitchen. The patio has views of the Moab Rim and has a grill and patio furniture. In the living room there is also an electric fireplace that adds ambiance for those cooler nights in Moab.</p>
+                            <p>Guests have use of the whole house. The owner lives off site, but in town.</p>
+                            <p>I live in town and will have my number available if guests need anything. Occasionally, I will be out of town and unreachable, in which case I will have an alternate emergency number available to guests.</p>
+                            <p>A car is needed to see the sights in and around Moab.</p>
+                            <p>This unit is on the second story and there is no elevator. Being on the 2nd floor means that the views from the balcony are better!</p>
+                            <p>There are 2 smart TVs in the house (living room and master bedroom). A netflix account is provided.</p>
+                            <p>A Pack 'n Play is provided in the event that you are bringing an infant.</p>
+                            <p>A one time $75 cleaning fee is included on every reservation.</p>
+                            <p>The 10.5% room tax that all nightly rentals are required to collect is included in the price.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p class="col-md-2">Prices</p>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Night: $175</li>
+                                <li>Week: $1295</li>
+                                <li>Month: $4795</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Security Deposit: $100</li>
+                                <li>Cleaning Fee: $75</li>
+                                <li>Cancellation: ?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p class="col-md-2">Rules</p>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>No Pets</li>
+                                <li>No Smoking</li>
+                                <li>No parties or events</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Checkin is after 4PM</li>
+                                <li>Quiet hours from 10PM til 8AM</li>
+                                <li>Enjoy yourselves</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <a href="https://www.airbnb.com/rooms/11549681"  class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+
+                <div ng-controller="carouselCntrl" class="container container-photo">
+                    <div class="photo-carousel">
+                        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                                <img ng-src="{{slide.image}}" style="margin:auto;">
+                            </uib-slide>
+                        </uib-carousel>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
 
 </body>
 

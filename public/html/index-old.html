@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="myApp" lang="en">
+
+<head>
+	<title>Moab Rentals</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-touch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../style/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body ng-controller="mainCntrl">
+
+		<div class="background">
+
+			<!-- Header -->
+			<div class="nav-header">
+				<div class="nav-bar nav-bar-header">
+					<a class="buttons" href="#/short">Short Stay</a>
+					<a class="buttons" href="#/long">Long Stay</a>
+					<a class="buttons" href="#/contact">Contact</a>
+					<a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
+				</div>
+				<p class="title">Moab Rentals</p>
+			</div>
+
+			<!-- Angular View -->
+			<div ng-view class="container"></div>
+
+			<!-- Footer -->
+			<div class="nav-bar nav-bar-footer">
+				<span>&copy; 2015 by Moab Rentals</span>
+				<a class="buttons" href="#">ShortStay</a>
+				<a class="buttons" href="#">Long Stay</a>
+				<a class="buttons" href="#">Contact</a>
+			</div>
+
+		</div>
+
+</body>
+
+</html>
+

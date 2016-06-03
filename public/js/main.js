@@ -31,20 +31,20 @@ app.controller('carouselCntrl', ['$scope', function($scope) {
 
     $scope.slides = [
         {
-        image: '../images/bedroom1-crop.jpg',
+        image: '../images/bedroom1.jpg',
         text: 'slide #1',
         id: 0
         },
-        {
-        image: '../images/livingroom-crop.jpg',
-        text: 'slide #2',
-        id: 1
-        },
-        {
-        image: '../images/bedroom2-crop.jpg',
-        text: 'slide #3',
-        id: 2
-        }
+        // {
+        // image: '../images/bedroom2.jpg',
+        // text: 'slide #2',
+        // id: 1
+        // },
+        // {
+        // image: '../images/bedroom3.jpg',
+        // text: 'slide #3',
+        // id: 2
+        // }
     ];
 
 }]);
