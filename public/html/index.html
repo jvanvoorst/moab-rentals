@@ -22,8 +22,8 @@
 
         <header class="mr-header">
 
-            <div class="nav-bar">
-                <a class="nav-links" href="#/short">Short Stay</a>
+            <div ng-controller="scrollCntrl" class="nav-bar">
+                <a class="nav-links" ngClick="scrollTo()">Short Stay</a>
                 <a class="nav-links" href="#/long">Long Stay</a>
                 <a class="nav-links" href="#/contact">Contact</a>
             </div>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="bg-scrolling color-1">
-                <div class="container">
+                <div class="container" id="short">
                     <hr>
                     <div class="row">
                         <p class="col-md-2">Space</p>
@@ -137,20 +137,24 @@
                     <div class="text-center">
                         <a href="https://www.airbnb.com/rooms/11549681"  class="btn btn-primary">Book Now</a>
                     </div>
-                </div>
 
-                <div ng-controller="carouselCntrl" class="container container-photo">
-                    <div class="photo-carousel">
-                        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                                <img ng-src="{{slide.image}}" style="margin:auto;">
-                            </uib-slide>
-                        </uib-carousel>
+                    <div ng-controller="carouselCntrl" class="row container-photo">
+                            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                                </uib-slide>
+                            </uib-carousel>
                     </div>
+
                 </div>
 
             </div>
 
+            <div class="bg-fixed">
+                <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
+                <h1>Long Term Rentals</h1>
+                <img class="chevron" src="../images/chevron.svg">
+            </div>
 
         </main>
 

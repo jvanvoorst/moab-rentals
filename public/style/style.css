@@ -57,7 +57,6 @@ body, html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    /*background-attachment: fixed;*/
     z-index: 1;
     background-image: url("../images/LaSals.jpg");
 }
@@ -154,17 +153,9 @@ body, html {
 }
 
 /* Carousel ==================================================================*/
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
-.photo-carousel {
-    margin: auto;
-    width: 100%;
-}
+
 .container-photo {
-    padding: 20px 0 0 0;
+    margin: 40px 0 0 0;
 }
 .container-quote {
     margin-top: 13vw;

@@ -32,19 +32,29 @@ app.controller('carouselCntrl', ['$scope', function($scope) {
     $scope.slides = [
         {
         image: '../images/bedroom1.jpg',
-        text: 'slide #1',
+        text: 'slide #2',
         id: 0
         },
-        // {
-        // image: '../images/bedroom2.jpg',
-        // text: 'slide #2',
-        // id: 1
-        // },
-        // {
-        // image: '../images/bedroom3.jpg',
-        // text: 'slide #3',
-        // id: 2
-        // }
+        {
+        image: '../images/bedroom2.jpg',
+        text: 'slide #2',
+        id: 1
+        },
+        {
+        image: '../images/bedroom3.jpg',
+        text: 'slide #3',
+        id: 2
+        }
     ];
+
+}]);
+
+app.controller('scrollCntrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+
+    $scope.scrollTo = function() {
+        location.hash('short');
+        $anchorScroll();
+        console.log('short works');
+    };
 
 }]);
