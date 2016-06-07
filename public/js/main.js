@@ -1,21 +1,26 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTouch']);
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTouch', 'smoothScroll']);
 
-app.config(['$routeProvider', function($routeProvider) {
-    $routeProvider
-    .when('/', {
-        templateUrl: 'html/welcome.html',
-        controller: 'mainCntrl'
-    })
-    .when('/short', {
-        templateUrl: 'html/short.html',
-        controller: 'mainCntrl'
-    });
+// app.config(['$routeProvider', function($routeProvider) {
+//     $routeProvider
+//     .when('/', {
+//         templateUrl: 'html/welcome.html',
+//         controller: 'mainCntrl'
+//     })
+//     .when('/short', {
+//         templateUrl: 'html/short.html',
+//         controller: 'mainCntrl'
+//     });
 
-}]);
+// }]);
 
 
-app.controller('mainCntrl', ['$scope', function($scope) {
+app.controller('mainCntrl', ['$scope', 'smoothScroll', function($scope, smoothScroll) {
 
+    $scope.move = function() {
+        var element = document.getElementById('short');
+        smoothScroll(element);
+        console.log(element);
+    };
 
 }]);
 
@@ -51,10 +56,14 @@ app.controller('carouselCntrl', ['$scope', function($scope) {
 
 app.controller('scrollCntrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
 
-    $scope.scrollTo = function() {
-        location.hash('short');
-        $anchorScroll();
-        console.log('short works');
-    };
+    // $anchorScroll.yOffset = 100;
+
+    // $location.hash()
+
+    // $scope.scrollTo = function(loc) {
+    //     $location.hash(loc);
+    //     $anchorScroll();
+    //     console.log(loc + 'short works');
+    // };
 
 }]);

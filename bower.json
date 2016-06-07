@@ -1,0 +1,18 @@
+{
+  "name": "moab-rentals",
+  "description": "",
+  "main": "moabApp.js",
+  "authors": [
+    "Justin <justin.vanvoorst@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jvanvoorst/moab-rentals",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

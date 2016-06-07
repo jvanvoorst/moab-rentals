@@ -3,11 +3,13 @@
 
 <head>
     <title>Moab Rentals</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script> -->
+    <script type="text/javascript" src="../../bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-touch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="../../bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300|Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -18,12 +20,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body ng-controller="mainCntrl">
 
         <header class="mr-header">
 
-            <div ng-controller="scrollCntrl" class="nav-bar">
-                <a class="nav-links" ngClick="scrollTo()">Short Stay</a>
+            <div  class="nav-bar">
+                <a class="nav-links" scroll-to="short">Short Stay</a>
                 <a class="nav-links" href="#/long">Long Stay</a>
                 <a class="nav-links" href="#/contact">Contact</a>
             </div>
@@ -37,11 +39,11 @@
             <div class="bg-fixed">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1>Short Term Rental</h1>
-                <img class="chevron" src="../images/chevron.svg">
+                <img class="chevron" src="../images/chevron.svg" alt="down arrow">
             </div>
 
-            <div class="bg-scrolling color-1">
-                <div class="container" id="short">
+            <div class="bg-scrolling color-1" id="short">
+                <div class="container">
                     <hr>
                     <div class="row">
                         <p class="col-md-2">Space</p>
