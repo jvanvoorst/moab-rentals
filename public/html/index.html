@@ -25,23 +25,25 @@
         <header class="mr-header">
 
             <div  class="nav-bar">
-                <a class="nav-links" scroll-to="short">Short Stay</a>
-                <a class="nav-links" href="#/long">Long Stay</a>
-                <a class="nav-links" href="#/contact">Contact</a>
+                <a class="nav-links" scroll-to="short" offset="120" duration="2000">Short Stay</a>
+                <a class="nav-links" scroll-to="long" offset="120" duration="2000">Long Stay</a>
+                <a class="nav-links" scroll-to="contact" offset="120" duration="2000">Contact</a>
             </div>
 
             <p class="title">Moab Rentals</p>
 
         </header>
 
-        <main class="main-content">
+        <main class="main-content" smooth-scroll>
 
-            <div class="bg-fixed">
+            <!-- First fixed picture - Short term -->
+            <div class="bg-fixed bg-1">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1>Short Term Rental</h1>
-                <img class="chevron" src="../images/chevron.svg" alt="down arrow">
+                <img class="chevron" scroll-to="short" offset="35" src="../images/chevron.svg" alt="down arrow">
             </div>
 
+            <!-- Scrolling short term rental content -->
             <div class="bg-scrolling color-1" id="short">
                 <div class="container">
                     <hr>
@@ -140,22 +142,54 @@
                         <a href="https://www.airbnb.com/rooms/11549681"  class="btn btn-primary">Book Now</a>
                     </div>
 
+                    <!-- Short term photo carousel -->
                     <div ng-controller="carouselCntrl" class="row container-photo">
                             <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
                                 <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                                    <img ng-src="{{slide.image}}">
                                 </uib-slide>
                             </uib-carousel>
                     </div>
 
                 </div>
-
             </div>
 
-            <div class="bg-fixed">
+            <!-- Second fixed picture - Long term -->
+            <div class="bg-fixed bg-2">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1>Long Term Rentals</h1>
-                <img class="chevron" src="../images/chevron.svg">
+                <img class="chevron" scroll-to="long" offset="120" src="../images/chevron.svg" alt="down arrow">
+            </div>
+
+            <!-- Scrolling Long term content -->
+            <div class="bg-scrolling color-2" id="long">
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id iaculis mi. Donec tristique gravida tellus. Aenean tincidunt, nunc ut tempus scelerisque, enim nibh aliquet tellus, id interdum mauris lorem eget leo. Quisque non sagittis lectus. Pellentesque aliquam convallis bibendum. Fusce suscipit sit amet sem et dapibus. Integer mauris eros, venenatis sodales mollis at, molestie accumsan tellus. Sed ornare lectus non lectus dignissim consequat. Aliquam consectetur massa a erat eleifend, vel hendrerit eros tristique.
+
+                    Phasellus ultrices ultricies mi. Morbi congue ex eros, sit amet fringilla neque tempor ac. Phasellus condimentum venenatis tellus, ac vulputate erat volutpat maximus. Suspendisse ut risus imperdiet, vestibulum justo eu, aliquet neque. Quisque aliquet iaculis congue. Proin iaculis rhoncus lorem, lacinia euismod sem ultricies at. Duis id nisl ornare, efficitur ante nec, sollicitudin augue.
+
+                    Integer et justo facilisis, ultrices arcu mattis, elementum lectus. Praesent a neque convallis, laoreet diam ac, ultrices augue. Curabitur id nunc id nibh hendrerit posuere eget id felis. Donec sit amet erat in urna hendrerit fermentum. Vivamus sit amet ipsum vitae massa malesuada elementum. Nulla dictum maximus tellus, vel euismod eros commodo id. Donec et finibus metus, et facilisis velit. Integer eget arcu purus. Integer a erat in nulla dignissim accumsan. Praesent pretium mauris sed dolor faucibus aliquam. Etiam ullamcorper, sem sodales bibendum rhoncus, nunc ipsum varius mauris, a efficitur sem urna sed leo. Pellentesque efficitur enim arcu, ac convallis lectus ornare sit amet. In sed magna arcu.
+
+                    Morbi ut mi fermentum, scelerisque nulla nec, elementum orci. Morbi eleifend dignissim quam eget auctor. Praesent varius aliquam faucibus. Nullam dictum ex ex, non sodales est fringilla ut. Donec tellus orci, dapibus ac leo vel, consectetur congue dolor. Mauris sed velit at augue posuere tempor. Pellentesque malesuada purus id metus rhoncus ultricies. Donec turpis tellus, varius at auctor eu, gravida nec lorem. Proin sit amet lorem consequat, sodales leo quis, auctor augue. Nunc ultricies, lectus ut pulvinar imperdiet, orci orci vulputate velit, sit amet laoreet leo leo eu lacus. Donec sapien diam, pharetra bibendum purus ac, suscipit tempus nulla. Nunc justo magna, fermentum aliquet mattis vel, vehicula nec tellus. Cras eu aliquet nisi, a sodales eros.
+
+                    Curabitur vulputate venenatis justo et fermentum. Pellentesque eget sagittis enim, vitae interdum odio. Donec eu quam eros. Ut tortor arcu, ultricies eget volutpat et, cursus placerat enim. In tortor ex, tristique ac sagittis at, tincidunt sit amet arcu. Morbi mattis diam ipsum. In hac habitasse platea dictumst. Sed sit amet vestibulum erat, eget malesuada sapien. Praesent imperdiet tellus elit, eget suscipit nunc iaculis vitae.</p>
+                </div>
+            </div>
+
+            <!-- Third fixed picture - Contact -->
+            <div class="bg-fixed bg-3">
+                <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
+                <h1>Contact</h1>
+                <img class="chevron" scroll-to="contact" offset="120" src="../images/chevron.svg" alt="down arrow">
+            </div>
+
+            <!-- Scrolling contact content -->
+            <div class="bg-scrolling color-3" id="contact">
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id iaculis mi. Donec tristique gravida tellus. Aenean tincidunt, nunc ut tempus scelerisque, enim nibh aliquet tellus, id interdum mauris lorem eget leo. Quisque non sagittis lectus. Pellentesque aliquam convallis bibendum. Fusce suscipit sit amet sem et dapibus. Integer mauris eros, venenatis sodales mollis at, molestie accumsan tellus. Sed ornare lectus non lectus dignissim consequat. Aliquam consectetur massa a erat eleifend, vel hendrerit eros tristique.
+
+                    Phasellus ultrices ultricies mi. Morbi congue ex eros, sit amet fringilla neque tempor ac. Phasellus condimentum venenatis tellus, ac vulputate erat volutpat maximus. Suspendisse ut risus imperdiet, vestibulum justo eu, aliquet neque. Quisque aliquet iaculis congue. Proin iaculis rhoncus lorem, lacinia euismod sem ultricies at. Duis id nisl ornare, efficitur ante nec, sollicitudin augue.</p>
+                </div>
             </div>
 
         </main>
