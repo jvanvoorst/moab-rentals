@@ -22,14 +22,14 @@
 
 <body ng-controller="mainCntrl">
 
-        <header class="mr-header">
+        <header class="mr-header" id="top">
 
             <div  class="nav-bar">
-                <a class="nav-links" scroll-to="short" offset="120" duration="2000">Short Stay</a>
-                <a class="nav-links" scroll-to="long" offset="120" duration="2000">Long Stay</a>
-                <a class="nav-links" scroll-to="contact" offset="120" duration="2000">Contact</a>
+                <a class="nav-links" scroll-to="short" offset="40" duration="2000">Short Stay</a>
+                <a class="nav-links" scroll-to="long" offset="40" duration="2000">Long Stay</a>
+                <a class="nav-links" scroll-to="contact" offset="40" duration="2000">Contact</a>
             </div>
-            <p class="title">Moab Rentals</p>
+            <p class="title" scroll-to="top">Moab Rentals</p>
 
         </header>
 
@@ -39,11 +39,11 @@
             <div class="bg-fixed bg-1">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1>Short Term Rental</h1>
-                <img class="chevron" scroll-to="short" offset="35" src="../images/chevron.svg" alt="down arrow">
+                <img class="chevron" scroll-to="short" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
 
             <!-- Scrolling short term rental content -->
-            <div class="bg-scrolling color-1" id="short">
+            <div class="bg-scrolling color-brown" id="short">
                 <div class="container">
                     <hr>
                     <div class="row">
@@ -157,12 +157,12 @@
             <div class="bg-fixed bg-2">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1>Long Term Rentals</h1>
-                <img class="chevron" scroll-to="long" offset="120" src="../images/chevron.svg" alt="down arrow">
+                <img class="chevron" scroll-to="long" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
 
             <!-- Scrolling Long term content -->
-            <div class="bg-scrolling color-2" id="long">
-                <div class="container">
+            <div class="bg-scrolling color-orange" id="long">
+                <div class="container scroll-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id iaculis mi. Donec tristique gravida tellus. Aenean tincidunt, nunc ut tempus scelerisque, enim nibh aliquet tellus, id interdum mauris lorem eget leo. Quisque non sagittis lectus. Pellentesque aliquam convallis bibendum. Fusce suscipit sit amet sem et dapibus. Integer mauris eros, venenatis sodales mollis at, molestie accumsan tellus. Sed ornare lectus non lectus dignissim consequat. Aliquam consectetur massa a erat eleifend, vel hendrerit eros tristique.
 
                     Phasellus ultrices ultricies mi. Morbi congue ex eros, sit amet fringilla neque tempor ac. Phasellus condimentum venenatis tellus, ac vulputate erat volutpat maximus. Suspendisse ut risus imperdiet, vestibulum justo eu, aliquet neque. Quisque aliquet iaculis congue. Proin iaculis rhoncus lorem, lacinia euismod sem ultricies at. Duis id nisl ornare, efficitur ante nec, sollicitudin augue.
@@ -179,12 +179,12 @@
             <div class="bg-fixed bg-3">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1>Contact</h1>
-                <img class="chevron" scroll-to="contact" offset="120" src="../images/chevron.svg" alt="down arrow">
+                <img class="chevron" scroll-to="contact" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
 
             <!-- Scrolling contact content -->
-            <div class="bg-scrolling color-3" id="contact">
-                <div class="container">
+            <div class="bg-scrolling color-green" id="contact">
+                <div class="container scroll-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id iaculis mi. Donec tristique gravida tellus. Aenean tincidunt, nunc ut tempus scelerisque, enim nibh aliquet tellus, id interdum mauris lorem eget leo. Quisque non sagittis lectus. Pellentesque aliquam convallis bibendum. Fusce suscipit sit amet sem et dapibus. Integer mauris eros, venenatis sodales mollis at, molestie accumsan tellus. Sed ornare lectus non lectus dignissim consequat. Aliquam consectetur massa a erat eleifend, vel hendrerit eros tristique.
 
                     Phasellus ultrices ultricies mi. Morbi congue ex eros, sit amet fringilla neque tempor ac. Phasellus condimentum venenatis tellus, ac vulputate erat volutpat maximus. Suspendisse ut risus imperdiet, vestibulum justo eu, aliquet neque. Quisque aliquet iaculis congue. Proin iaculis rhoncus lorem, lacinia euismod sem ultricies at. Duis id nisl ornare, efficitur ante nec, sollicitudin augue.</p>

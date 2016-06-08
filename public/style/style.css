@@ -17,6 +17,7 @@
     position: absolute;
     top: 0;
     left: 10px;
+    cursor: pointer;
 }
 .nav-bar {
     background: #907672;
@@ -59,7 +60,15 @@ body, html {
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 1;
+}
+.bg-1 {
     background-image: url("../images/LaSals.jpg");
+}
+.bg-2 {
+    background-image: url("../images/rocks.jpg");
+}
+.bg-3 {
+    background-image: url("../images/sunset.jpg");
 }
 .bg-scrolling {
     position: relative;
@@ -72,23 +81,30 @@ body, html {
 }
 
 /* Scrolling content color palette */
-.color-1 {
+.color-brown {
     background-color: #3d3536;
     color: #a6989a;
 }
-.color-1 hr {
+.color-brown hr {
     border-color: #a6989a;
 }
-.color-2 {
-    background-color: #99a478;
-    color: #3d3536;
+.color-blue {
+    background-color: #707a8c;
+    color: #313946;
 }
-.color-3 {
-    background-color: #b4d7a8;
-    color: #3d3536;
+.color-green {
+    background-color: #cfefc5;
+    color: #3a4e33;
+}
+.color-orange {
+    background-color: #F6A060;
+    color: #501717;
 }
 
 /* Scrolling elements; header and chevron */
+.scroll-content {
+    margin-top: 50px;
+}
 .bg-fixed h1 {
     position: absolute;
     left: 50%;
