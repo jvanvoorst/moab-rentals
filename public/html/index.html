@@ -25,7 +25,7 @@
         <header class="mr-header" id="top">
 
             <div  class="nav-bar">
-                <a class="nav-links" scroll-to="short" offset="40" duration="2000">Short Stay</a>
+                <a class="nav-links" ng-class="{'link-active' : position == 'short'}" scroll-to="short" offset="40" duration="2000">Short Stay</a>
                 <a class="nav-links" scroll-to="long" offset="40" duration="2000">Long Stay</a>
                 <a class="nav-links" scroll-to="contact" offset="40" duration="2000">Contact</a>
             </div>

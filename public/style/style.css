@@ -38,6 +38,9 @@
 .hamburger {
     display: none;
 }
+.link-active {
+    background-color: red;
+}
 
 /* Main Content ==============================================================*/
 /* minimum heights need to ba assigned for the slider to work */
