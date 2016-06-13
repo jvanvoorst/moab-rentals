@@ -1,43 +1,38 @@
 var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTouch', 'smoothScroll']);
 
-// app.config(['$routeProvider', function($routeProvider) {
-//     $routeProvider
-//     .when('/', {
-//         templateUrl: 'html/welcome.html',
-//         controller: 'mainCntrl'
-//     })
-//     .when('/short', {
-//         templateUrl: 'html/short.html',
-//         controller: 'mainCntrl'
-//     });
+app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scope, smoothScroll, $window) {
 
-// }]);
-
-
-app.controller('mainCntrl', ['$scope', 'smoothScroll', function($scope, smoothScroll) {
-
-    $scope.scrollPosition = '';
-
-    function scrollPosition(e) {
-
-        console.log(window.pageYOffset);
-        console.log($scope.position);
-
-        if (window.pageYOffset > 1000 ) {
-            $scope.position = 'short';
-            console.log('short');
+    angular.element($window).bind("scroll", function() {
+        if (this.pageYOffset >= 1000) {
+            $scope.$apply(function() {
+                $scope.position = 'short';
+                console.log($scope.position);
+            });
         }
+    });
 
-        // if (window.pageYOffset > 2650 ) {
-        //     $scope.position = 'long';
-        // }
-        // if ( window.pageYOffset > 4850 ) {
-        //     $scope.position = 'contact';
-        // }
-    }
+    // $scope.scrollPosition = '';
 
-    // Scroll handler to toggle classes.
-    window.addEventListener('scroll', scrollPosition, false);
+    // function scrollPosition(e) {
+
+    //     console.log(window.pageYOffset);
+    //     console.log($scope.position);
+
+    //     if (window.pageYOffset > 1000 ) {
+    //         $scope.position = 'short';
+    //         console.log('short');
+    //     }
+
+    //     // if (window.pageYOffset > 2650 ) {
+    //     //     $scope.position = 'long';
+    //     // }
+    //     // if ( window.pageYOffset > 4850 ) {
+    //     //     $scope.position = 'contact';
+    //     // }
+    // }
+
+    // // Scroll handler to toggle classes.
+    // window.addEventListener('scroll', scrollPosition, false);
 
 }]);
 
