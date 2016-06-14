@@ -3,20 +3,24 @@ var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTo
 app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scope, smoothScroll, $window) {
 
     angular.element($window).bind("scroll", function() {
-        if (this.pageYOffset >= 1000) {
+        if (this.pageYOffset > 1000 && this.pageYOffset < 2650) {
             $scope.$apply(function() {
                 $scope.position = 'short';
-                console.log($scope.position);
             });
         }
-        if (this.pageYOffset > 2650) {
+        else if (this.pageYOffset > 2650 && this.pageYOffset < 4850) {
             $scope.$apply(function() {
                 $scope.position = 'long';
             });
         }
-        if (this.pageYOffset > 4850) {
+        else if (this.pageYOffset > 4850) {
             $scope.$apply(function() {
                 $scope.position = 'contact';
+            });
+        }
+        else {
+            $scope.$apply(function() {
+                $scope.position = '';
             });
         }
     });

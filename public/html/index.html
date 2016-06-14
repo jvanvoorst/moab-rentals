@@ -27,11 +27,15 @@
         <header class="mr-header" id="top">
 
             <div class="nav-bar">
-                <div class="nav-links">
-                    <a  ng-class="{'link-active' : position === 'short'}" scroll-to="short" offset="40" duration="2000">Short Stay</a>
+                <div class="nav-links" ng-class="{'link-active' : position === 'short'}">
+                    <a class="center" scroll-to="short" offset="40" duration="2000">Short Stay</a>
                 </div>
-                <a class="nav-links" ng-class="{'link-active' : position === 'long'}" scroll-to="long" offset="40" duration="2000">Long Stay</a>
-                <a class="nav-links" ng-class="{'link-active' : position === 'contact'}" scroll-to="contact" offset="40" duration="2000">Contact</a>
+                <div class="nav-links" ng-class="{'link-active' : position === 'long'}">
+                    <a class="center" scroll-to="long" offset="40" duration="2000">Long Stay</a>
+                </div>
+                <div class="nav-links" ng-class="{'link-active' : position === 'contact'}">
+                    <a class="center" scroll-to="contact" offset="40" duration="2000">Contact</a>
+                </div>
             </div>
             <p class="title" scroll-to="top">Moab Rentals</p>
 
