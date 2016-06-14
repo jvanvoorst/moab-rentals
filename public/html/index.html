@@ -27,14 +27,17 @@
         <header class="mr-header" id="top">
 
             <div class="nav-bar">
-                <div class="nav-links" ng-class="{'link-active' : position === 'short'}">
-                    <a class="center" scroll-to="short" offset="40" duration="2000">Short Stay</a>
+                <div class="nav-links hidden-xs" ng-class="{'link-active' : position === 'short'}">
+                    <a class="horizontal-center" scroll-to="short" offset="40" duration="2000">Short Stay</a>
                 </div>
-                <div class="nav-links" ng-class="{'link-active' : position === 'long'}">
-                    <a class="center" scroll-to="long" offset="40" duration="2000">Long Stay</a>
+                <div class="nav-links hidden-xs" ng-class="{'link-active' : position === 'long'}">
+                    <a class="horizontal-center" scroll-to="long" offset="40" duration="2000">Long Stay</a>
                 </div>
-                <div class="nav-links" ng-class="{'link-active' : position === 'contact'}">
-                    <a class="center" scroll-to="contact" offset="40" duration="2000">Contact</a>
+                <div class="nav-links hidden-xs" ng-class="{'link-active' : position === 'contact'}">
+                    <a class="horizontal-center" scroll-to="contact" offset="40" duration="2000">Contact</a>
+                </div>
+                <div class="visible-xs hamburger">
+                    <a href="#"><img src="../images/hamburger.svg" alt="Menu"></a>
                 </div>
             </div>
             <p class="title" scroll-to="top">Moab Rentals</p>
@@ -45,8 +48,7 @@
 
             <!-- First fixed picture - Short term -->
             <div class="bg-fixed bg-1">
-                <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
-                <h1>Short Term Rental</h1>
+                <h1 class="scrolling-title">Short Term Rental</h1>
                 <img class="chevron" scroll-to="short" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
 
@@ -164,7 +166,7 @@
             <!-- Second fixed picture - Long term -->
             <div class="bg-fixed bg-2">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
-                <h1>Long Term Rentals</h1>
+                <h1 class="scrolling-title">Long Term Rentals</h1>
                 <img class="chevron" scroll-to="long" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
 
@@ -186,7 +188,7 @@
             <!-- Third fixed picture - Contact -->
             <div class="bg-fixed bg-3">
                 <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
-                <h1>Contact</h1>
+                <h1 class="scrolling-title">Contact</h1>
                 <img class="chevron" scroll-to="contact" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
 

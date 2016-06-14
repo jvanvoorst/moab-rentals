@@ -39,16 +39,19 @@
 .nav-links a {
     color: #A7B8C3;
 }
-.hamburger {
-    display: none;
-}
 .link-active {
     background-color: #A7B8C3;
 }
 .link-active a {
     color: #907672;
 }
-.center {
+.hamburger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+.horizontal-center {
     margin: auto;
     display: block;
     width: 60%;
@@ -65,7 +68,7 @@ body, html {
     height: 100%;
 }
 
-/* Fixed and Scrolling backgrounds */
+/* Fixed backgrounds */
 .bg-fixed {
     top: 0;
     left: 0;
@@ -76,6 +79,7 @@ body, html {
     background-position: center center;
     z-index: 1;
 }
+/* Fixed background images */
 .bg-1 {
     background-image: url("../images/LaSals.jpg");
 }
@@ -85,6 +89,8 @@ body, html {
 .bg-3 {
     background-image: url("../images/sunset.jpg");
 }
+
+/* Scrolling backgrounds */
 .bg-scrolling {
     position: relative;
     min-height: 100%;
@@ -95,7 +101,7 @@ body, html {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Scrolling content color palette */
+/* Scrolling color palette */
 .color-brown {
     background-color: #3d3536;
     color: #a6989a;
@@ -116,11 +122,11 @@ body, html {
     color: #501717;
 }
 
-/* Scrolling elements; header and chevron */
+/* Scrolling elements; title and chevron */
 .scroll-content {
     margin-top: 50px;
 }
-.bg-fixed h1 {
+.scrolling-title {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -159,35 +165,23 @@ body, html {
     .bg-fixed {
         background-attachment: fixed;
     }
-    .bg-fixed h1 {
+    .scrolling-title {
         font-size: 48px;
         font-weight: 300;
   }
 }
 
 /* Displays below 767px in width */
+/* disable fixed backgrounds so that touch devices can scroll */
 @media only screen and (max-width: 767px) {
-    .nav-links {
-        display: none;
-    }
     .title {
-        font-size: 7vw;
+        font-size: 8vw;
+        width: 30px;
     }
     .nav-bar {
-        height: 8vw;
+        height: 15vw;
     }
-    .hamburger {
-        display: inline;
-        position: absolute;
-        left: 50%;
-        top: 17%;
-        width: 9vw;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -o-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
+
     .chevron {
         width: 10vw;
     }
