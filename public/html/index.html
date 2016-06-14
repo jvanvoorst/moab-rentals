@@ -11,8 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../style/reset.css">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
 
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script> -->
-    <script type="text/javascript" src="../../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-touch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script>
@@ -27,10 +26,12 @@
 
         <header class="mr-header" id="top">
 
-            <div  class="nav-bar">
-                <a class="nav-links" ng-class="{'link-active' : position === 'short'}" scroll-to="short" offset="40" duration="2000">Short Stay</a>
-                <a class="nav-links" scroll-to="long" offset="40" duration="2000">Long Stay</a>
-                <a class="nav-links" scroll-to="contact" offset="40" duration="2000">Contact</a>
+            <div class="nav-bar">
+                <div class="nav-links">
+                    <a  ng-class="{'link-active' : position === 'short'}" scroll-to="short" offset="40" duration="2000">Short Stay</a>
+                </div>
+                <a class="nav-links" ng-class="{'link-active' : position === 'long'}" scroll-to="long" offset="40" duration="2000">Long Stay</a>
+                <a class="nav-links" ng-class="{'link-active' : position === 'contact'}" scroll-to="contact" offset="40" duration="2000">Contact</a>
             </div>
             <p class="title" scroll-to="top">Moab Rentals</p>
 

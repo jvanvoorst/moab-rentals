@@ -9,30 +9,17 @@ app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scop
                 console.log($scope.position);
             });
         }
+        if (this.pageYOffset > 2650) {
+            $scope.$apply(function() {
+                $scope.position = 'long';
+            });
+        }
+        if (this.pageYOffset > 4850) {
+            $scope.$apply(function() {
+                $scope.position = 'contact';
+            });
+        }
     });
-
-    // $scope.scrollPosition = '';
-
-    // function scrollPosition(e) {
-
-    //     console.log(window.pageYOffset);
-    //     console.log($scope.position);
-
-    //     if (window.pageYOffset > 1000 ) {
-    //         $scope.position = 'short';
-    //         console.log('short');
-    //     }
-
-    //     // if (window.pageYOffset > 2650 ) {
-    //     //     $scope.position = 'long';
-    //     // }
-    //     // if ( window.pageYOffset > 4850 ) {
-    //     //     $scope.position = 'contact';
-    //     // }
-    // }
-
-    // // Scroll handler to toggle classes.
-    // window.addEventListener('scroll', scrollPosition, false);
 
 }]);
 

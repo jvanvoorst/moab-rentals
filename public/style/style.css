@@ -39,7 +39,8 @@
     display: none;
 }
 .link-active {
-    background-color: red;
+    background-color: #A7B8C3;
+    color: #907672;
 }
 
 /* Main Content ==============================================================*/
