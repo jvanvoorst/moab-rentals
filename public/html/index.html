@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="../../bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+    <script type="text/javascript" src="../js/angular-pageslide-directive.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
 
 
@@ -28,16 +29,16 @@
 
             <div class="nav-bar">
                 <div class="nav-links hidden-xs" ng-class="{'link-active' : position === 'short'}">
-                    <a class="horizontal-center" scroll-to="short" offset="40" duration="2000">Short Stay</a>
+                    <a class="h-center" scroll-to="short" offset="40" duration="2000">Short Stay</a>
                 </div>
                 <div class="nav-links hidden-xs" ng-class="{'link-active' : position === 'long'}">
-                    <a class="horizontal-center" scroll-to="long" offset="40" duration="2000">Long Stay</a>
+                    <a class="h-center" scroll-to="long" offset="40" duration="2000">Long Stay</a>
                 </div>
                 <div class="nav-links hidden-xs" ng-class="{'link-active' : position === 'contact'}">
-                    <a class="horizontal-center" scroll-to="contact" offset="40" duration="2000">Contact</a>
+                    <a class="h-center" scroll-to="contact" offset="40" duration="2000">Contact</a>
                 </div>
                 <div class="visible-xs hamburger">
-                    <a href="#"><img src="../images/hamburger.svg" alt="Menu"></a>
+                    <a href="" ng-click="toggle()" ><img src="../images/hamburger.svg" alt="Menu"></a>
                 </div>
             </div>
             <p class="title" scroll-to="top">Moab Rentals</p>
@@ -165,7 +166,6 @@
 
             <!-- Second fixed picture - Long term -->
             <div class="bg-fixed bg-2">
-                <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1 class="scrolling-title">Long Term Rentals</h1>
                 <img class="chevron" scroll-to="long" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
@@ -187,7 +187,6 @@
 
             <!-- Third fixed picture - Contact -->
             <div class="bg-fixed bg-3">
-                <a href="#"><img class="hamburger" src="../images/hamburger.svg" alt="Menu"></a>
                 <h1 class="scrolling-title">Contact</h1>
                 <img class="chevron" scroll-to="contact" offset="30" src="../images/chevron.svg" alt="down arrow">
             </div>
@@ -201,7 +200,24 @@
                 </div>
             </div>
 
+            <pageslide ps-open="open" ps-side="left">
+                <div class="slidein-menu">
+                    <hr>
+                    <p scroll-to="short" offset="40" duration="2000" ng-click="toggle()">Short Term Rental</p>
+                    <hr>
+                    <p scroll-to="long" offset="40" duration="2000" ng-click="toggle()">Long Term Rentals</p>
+                    <hr>
+                    <p scroll-to="contact" offset="40" duration="2000" ng-click="toggle()">Contact</p>
+                    <hr>
+                    <div class="btn-close">
+                        <a href="" ng-click="toggle()">x</a>
+                    </div>
+                </div>
+
+            </pageslide>
+
         </main>
+
 
 </body>
 

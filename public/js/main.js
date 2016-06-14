@@ -1,7 +1,8 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTouch', 'smoothScroll']);
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTouch', 'smoothScroll', 'pageslide-directive']);
 
 app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scope, smoothScroll, $window) {
 
+    // logic for determining page scroll position and changing the active navigation link
     angular.element($window).bind("scroll", function() {
         if (this.pageYOffset > 1000 && this.pageYOffset < 2650) {
             $scope.$apply(function() {
@@ -24,6 +25,12 @@ app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scop
             });
         }
     });
+
+    $scope.open = false;
+    $scope.toggle = function() {
+        $scope.open = !$scope.open;
+        console.log('toggle ' + $scope.open);
+    };
 
 }]);
 
