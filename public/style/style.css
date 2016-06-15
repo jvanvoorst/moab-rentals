@@ -111,7 +111,7 @@ body, html {
 }
 .color-blue {
     background-color: #707a8c;
-    color: #313946;
+    color: #adbcc5;
 }
 .color-green {
     background-color: #cfefc5;
@@ -190,9 +190,6 @@ body, html {
     .bg-fixed {
         background-attachment: fixed;
     }
-    .scrolling-content h1 {
-        font-size: 48px;
-    }
 }
 
 /* Displays below 767px in width */
@@ -204,6 +201,7 @@ body, html {
     }
     .nav-bar {
         height: 15vw;
+        top: 3vw;
     }
 
     .chevron {
@@ -211,6 +209,7 @@ body, html {
     }
     .scrolling-title {
         font-size: 6vw;
+        font-weight: 600;
     }
     .scrolling-content h3 {
         font-size: 2.5vw;
@@ -247,6 +246,7 @@ body, html {
     padding-top: 20vw;
     font-family: Roboto;
     font-size: 5vw;
+    color: #3d3536;
 }
 .slidein-menu p {
     padding-left: 4vw;
@@ -258,4 +258,7 @@ body, html {
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-size: 17vw;
+}
+.btn-close a {
+    color: #6b2727;
 }
