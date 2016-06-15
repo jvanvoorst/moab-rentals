@@ -129,7 +129,7 @@ body, html {
 .scrolling-title {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     bottom: auto;
     right: auto;
     -webkit-transform: translateX(-50%) translateY(-50%);
@@ -140,12 +140,37 @@ body, html {
     width: 90%;
     max-width: 1170px;
     text-align: center;
-    font-size: 30px;
-    font-size: 1.875rem;
+    font-size: 4vw;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     color: white;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     letter-spacing: 14px;
+}
+.scrolling-content {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1170px;
+    text-align: center;
+}
+.scrolling-content h3 {
+    top: 80%;
+    font-size: 1.5vw;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: .75vw;
+    padding-top: 10px;
 }
 .chevron {
     position: absolute;
@@ -165,10 +190,9 @@ body, html {
     .bg-fixed {
         background-attachment: fixed;
     }
-    .scrolling-title {
+    .scrolling-content h1 {
         font-size: 48px;
-        font-weight: 300;
-  }
+    }
 }
 
 /* Displays below 767px in width */
@@ -184,6 +208,12 @@ body, html {
 
     .chevron {
         width: 10vw;
+    }
+    .scrolling-title {
+        font-size: 6vw;
+    }
+    .scrolling-content h3 {
+        font-size: 2.5vw;
     }
 }
 
