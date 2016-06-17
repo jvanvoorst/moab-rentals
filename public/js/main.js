@@ -2,6 +2,14 @@ var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTo
 
 app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scope, smoothScroll, $window) {
 
+    var width = angular.element($window.innerWidth);
+
+    angular.element($window).bind('resize', function () {
+        var width = this.innerWidth;
+    });
+
+    console.log(width);
+
     // logic for determining page scroll position and changing the active navigation link
     angular.element($window).bind("scroll", function() {
         if (this.pageYOffset > 1000 && this.pageYOffset < 2650) {
