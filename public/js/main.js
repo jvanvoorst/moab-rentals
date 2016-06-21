@@ -2,20 +2,27 @@ var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTo
 
 app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scope, smoothScroll, $window) {
 
-    var width = angular.element($window.innerWidth);
+    var height = angular.element($window.innerHeight)[0];
+    var width = angular.element($window.innerWidth)[0];
+    var shortHeight = angular.element(document.querySelector('#short'))[0].offsetHeight;
+    var shortHeight2 = angular.element(document.getElementById('#short'))[0].offsetHeight;
+    console.log('short ' + shortHeight);
+    console.log('short2 ' + shortHeight);
 
     angular.element($window).bind('resize', function () {
-        var width = this.innerWidth;
+        height = this.innerHeight;
+        console.log('resize: ' + height);
     });
 
-    console.log(width);
+    var adjustedHeight = height - width * .057;
 
     // logic for determining page scroll position and changing the active navigation link
     angular.element($window).bind("scroll", function() {
-        if (this.pageYOffset > 1000 && this.pageYOffset < 2650) {
+        if (this.pageYOffset > adjustedHeight && this.pageYOffset < 2650) {
             $scope.$apply(function() {
                 $scope.position = 'short';
             });
+            console.log('if ' + height);
         }
         else if (this.pageYOffset > 2650 && this.pageYOffset < 4850) {
             $scope.$apply(function() {
