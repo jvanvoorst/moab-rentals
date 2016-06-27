@@ -2,29 +2,39 @@ var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTo
 
 app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scope, smoothScroll, $window) {
 
+    // get current window height and width
     var height = angular.element($window.innerHeight)[0];
     var width = angular.element($window.innerWidth)[0];
-    var shortHeight = angular.element(document.querySelector('#short'))[0].offsetHeight;
-    var shortHeight2 = angular.element(document.getElementById('#short'))[0].offsetHeight;
-    console.log('short ' + shortHeight);
-    console.log('short2 ' + shortHeight);
-
+    // var bar height is in view widths to 5.7vw or .057 * window width gives current height of nav bar in pixels
+    var navHeight = width * .057;
+    // get height of short  and long term divs
+    var shortHeight = angular.element(short)[0].offsetHeight;
+    var longHeight = angular.element(long)[0].offsetHeight;
+    console.log(longHeight)
+    // since picture is set to 100% of windows heigth get the visible part by subtracting the height of the nav bar
+    var pictureHeight = height - navHeight;
+    console.log('pictureHeight ' + pictureHeight);
+    // if window is resized update height
     angular.element($window).bind('resize', function () {
         height = this.innerHeight;
-        console.log('resize: ' + height);
+        var pictureHeight = height - navHeight;
     });
 
-    var adjustedHeight = height - width * .057;
+    console.log('short ' + shortHeight);
+    console.log('long ' + longHeight)
+    console.log('break ' + (height + shortHeight + navHeight));
+
+    var breakPoint = (height + shortHeight + navHeight);
 
     // logic for determining page scroll position and changing the active navigation link
     angular.element($window).bind("scroll", function() {
-        if (this.pageYOffset > adjustedHeight && this.pageYOffset < 2650) {
+        if (this.pageYOffset > pictureHeight && this.pageYOffset < breakPoint) {
             $scope.$apply(function() {
                 $scope.position = 'short';
             });
             console.log('if ' + height);
         }
-        else if (this.pageYOffset > 2650 && this.pageYOffset < 4850) {
+        else if (this.pageYOffset > breakPoint && this.pageYOffset < 4850) {
             $scope.$apply(function() {
                 $scope.position = 'long';
             });
