@@ -2,49 +2,45 @@ var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngTo
 
 app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scope, smoothScroll, $window) {
 
-    // get current window height and width
-    var height = angular.element($window.innerHeight)[0];
+    // get current window width
     var width = angular.element($window.innerWidth)[0];
     // var bar height is in view widths so 5.7vw or .057 * window width gives current height of nav bar in pixels
     var navHeight = width * 0.057;
-    // get height of short and long term divs
-    var shortHeight = angular.element(short)[0].offsetHeight + 450;
-    var longHeight = angular.element(long)[0].offsetHeight;
-    // since picture is set to 100% of windows heigth get the visible part by subtracting the height of the nav bar
-    var pictureHeight = height - navHeight;
-    // if window is resized update height
+
+    // get pixel heights to the following elements from the top of the page minus the nav bar height
+    var atShort = angular.element(short)[0].offsetTop - navHeight;
+    var atLongPic = angular.element(longPic)[0].offsetTop - navHeight
+    var atLong = angular.element(long)[0].offsetTop - navHeight;
+    var atContact = angular.element(contact)[0].offsetTop - navHeight;
+
+    // attempt to update the distance to top of window of the elements if the window is resized
+    // not currently working as expected
     angular.element($window).bind('resize', function () {
-        height = this.innerHeight;
-        var pictureHeight = height - navHeight;
+        var atShort = angular.element(short)[0].offsetTop - navHeight;
+        var atLongPic = angular.element(longPic)[0].offsetTop - navHeight
+        var atLong = angular.element(long)[0].offsetTop - navHeight;
+        var atContact = angular.element(contact)[0].offsetTop - navHeight;
     });
 
-    console.log('height ' + height);
-    console.log('nav ' + navHeight);
-    console.log('pictureHeight ' + pictureHeight);
-    console.log('short ' + shortHeight);
-    console.log('long ' + longHeight);
-    console.log('break ' + (shortHeight + height));
-
-    // transition from short to long term link active
-    var breakPoint1 = (height + shortHeight);
-    // transition from long term to contact link active
-    var breakPoint2 = breakPoint1 + longHeight + height;
-    console.log('bp2 ' + breakPoint2);
 
     // logic for determining page scroll position and changing the active navigation link
     angular.element($window).bind("scroll", function() {
-        console.log(this.pageYOffset);
-        if (this.pageYOffset > pictureHeight && this.pageYOffset < breakPoint1) {
+        if (this.pageYOffset > atShort && this.pageYOffset < atLongPic) {
             $scope.$apply(function() {
                 $scope.position = 'short';
             });
         }
-        else if (this.pageYOffset > breakPoint1 && this.pageYOffset < breakPoint2) {
+        else if (this.pageYOffset > atLongPic && this.pageYOffset < atLong) {
+            $scope.$apply(function() {
+                $scope.position = '';
+            });
+        }
+        else if (this.pageYOffset > atLong && this.pageYOffset < atContact) {
             $scope.$apply(function() {
                 $scope.position = 'long';
             });
         }
-        else if (this.pageYOffset >= breakPoint2) {
+        else if (this.pageYOffset >= atContact) {
             $scope.$apply(function() {
                 $scope.position = 'contact';
             });
@@ -56,10 +52,11 @@ app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scop
         }
     });
 
+    // set mobile slide in menu to closed
     $scope.open = false;
+    // function to toggle the mobile menu
     $scope.toggle = function() {
         $scope.open = !$scope.open;
-        console.log('toggle ' + $scope.open);
     };
 
 }]);
