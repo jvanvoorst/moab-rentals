@@ -5,41 +5,46 @@ app.controller('mainCntrl', ['$scope', 'smoothScroll', '$window', function($scop
     // get current window height and width
     var height = angular.element($window.innerHeight)[0];
     var width = angular.element($window.innerWidth)[0];
-    // var bar height is in view widths to 5.7vw or .057 * window width gives current height of nav bar in pixels
-    var navHeight = width * .057;
-    // get height of short  and long term divs
-    var shortHeight = angular.element(short)[0].offsetHeight;
+    // var bar height is in view widths so 5.7vw or .057 * window width gives current height of nav bar in pixels
+    var navHeight = width * 0.057;
+    // get height of short and long term divs
+    var shortHeight = angular.element(short)[0].offsetHeight + 450;
     var longHeight = angular.element(long)[0].offsetHeight;
-    console.log(longHeight)
     // since picture is set to 100% of windows heigth get the visible part by subtracting the height of the nav bar
     var pictureHeight = height - navHeight;
-    console.log('pictureHeight ' + pictureHeight);
     // if window is resized update height
     angular.element($window).bind('resize', function () {
         height = this.innerHeight;
         var pictureHeight = height - navHeight;
     });
 
+    console.log('height ' + height);
+    console.log('nav ' + navHeight);
+    console.log('pictureHeight ' + pictureHeight);
     console.log('short ' + shortHeight);
-    console.log('long ' + longHeight)
-    console.log('break ' + (height + shortHeight + navHeight));
+    console.log('long ' + longHeight);
+    console.log('break ' + (shortHeight + height));
 
-    var breakPoint = (height + shortHeight + navHeight);
+    // transition from short to long term link active
+    var breakPoint1 = (height + shortHeight);
+    // transition from long term to contact link active
+    var breakPoint2 = breakPoint1 + longHeight + height;
+    console.log('bp2 ' + breakPoint2);
 
     // logic for determining page scroll position and changing the active navigation link
     angular.element($window).bind("scroll", function() {
-        if (this.pageYOffset > pictureHeight && this.pageYOffset < breakPoint) {
+        console.log(this.pageYOffset);
+        if (this.pageYOffset > pictureHeight && this.pageYOffset < breakPoint1) {
             $scope.$apply(function() {
                 $scope.position = 'short';
             });
-            console.log('if ' + height);
         }
-        else if (this.pageYOffset > breakPoint && this.pageYOffset < 4850) {
+        else if (this.pageYOffset > breakPoint1 && this.pageYOffset < breakPoint2) {
             $scope.$apply(function() {
                 $scope.position = 'long';
             });
         }
-        else if (this.pageYOffset > 4850) {
+        else if (this.pageYOffset >= breakPoint2) {
             $scope.$apply(function() {
                 $scope.position = 'contact';
             });

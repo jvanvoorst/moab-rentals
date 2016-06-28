@@ -96,7 +96,6 @@ body, html {
     min-height: 100%;
     padding: 4em 0;
     line-height: 1.6;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     z-index: 2;
     font-family: 'Roboto', sans-serif;
 }
@@ -219,7 +218,8 @@ body, html {
 /* Carousel ==================================================================*/
 
 .container-photo {
-    margin: 40px 0 0 0;
+    height: 450px;
+    background-color: #3d3536;
 }
 .container-photo img {
     margin: auto;
@@ -262,3 +262,6 @@ body, html {
 .btn-close a {
     color: #6b2727;
 }
+/*.tempphoto {
+    height: 450px;
+}*/

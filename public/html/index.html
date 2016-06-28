@@ -152,15 +152,18 @@
                         <a href="https://www.airbnb.com/rooms/11549681"  class="btn btn-primary">Book Now</a>
                     </div>
 
-                    <!-- Short term photo carousel -->
-                    <div ng-controller="carouselCntrl" class="row container-photo">
-                            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                                    <img ng-src="{{slide.image}}">
-                                </uib-slide>
-                            </uib-carousel>
-                    </div>
 
+                </div>
+            </div>
+
+            <!-- Short term photo carousel -->
+            <div class="container-photo">
+                <div ng-controller="carouselCntrl" class="container">
+                        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                                <img ng-src="{{slide.image}}">
+                            </uib-slide>
+                        </uib-carousel>
                 </div>
             </div>
 
