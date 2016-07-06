@@ -67,6 +67,9 @@
 body, html {
     height: 100%;
 }
+.long-heading {
+    font-size: 2vw;
+}
 
 /* Fixed backgrounds */
 .bg-fixed {
@@ -89,6 +92,9 @@ body, html {
 .bg-3 {
     background-image: url("../images/sunset.jpg");
 }
+.bg-3 a {
+    color: white;
+}
 
 /* Scrolling backgrounds */
 .bg-scrolling {
@@ -110,6 +116,12 @@ body, html {
 }
 .color-blue {
     background-color: #707a8c;
+    color: #adbcc5;
+}
+.color-blue hr {
+    border-color: #adbcc5;
+}
+.color-blue a {
     color: #adbcc5;
 }
 .color-green {
