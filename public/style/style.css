@@ -108,15 +108,19 @@ body, html {
 
 /* Scrolling color palette */
 .color-brown {
-    background-color: #3d3536;
-    color: #a6989a;
+    /*background-color: #3d3536;*/
+    background-color: #7b6c6e;
+    /*color: #a6989a;*/
+    color: #292324;
 }
 .color-brown hr {
     border-color: #a6989a;
 }
 .color-blue {
-    background-color: #707a8c;
-    color: #adbcc5;
+    background-color: #8f9aaf;
+    /*background-color: #707a8c;*/
+    /*color: #adbcc5;*/
+    color: #c6dfef;
 }
 .color-blue hr {
     border-color: #adbcc5;
@@ -231,7 +235,8 @@ body, html {
 
 .container-photo {
     height: 450px;
-    background-color: #3d3536;
+    /*background-color: #3d3536;*/
+    background-color: #7b6c6e;
 }
 .container-photo img {
     margin: auto;
