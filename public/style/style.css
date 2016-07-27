@@ -84,13 +84,13 @@ body, html {
 }
 /* Fixed background images */
 .bg-1 {
-    background: url("../images/arch2.jpg") top right no-repeat;
+    background: url("../images/arch3.jpg") top right no-repeat;
 }
 .bg-2 {
-    background-image: url("../images/rocks.jpg");
+    background-image: url("../images/arch2.jpg");
 }
 .bg-3 {
-    background-image: url("../images/sunset.jpg");
+    background-image: url("../images/arch.jpg");
 }
 .bg-3 a {
     color: white;
@@ -108,19 +108,15 @@ body, html {
 
 /* Scrolling color palette */
 .color-brown {
-    /*background-color: #3d3536;*/
-    background-color: #7b6c6e;
-    /*color: #a6989a;*/
-    color: #292324;
+    background-color: #3d3536;
+    color: #a6989a;
 }
 .color-brown hr {
     border-color: #a6989a;
 }
 .color-blue {
-    background-color: #8f9aaf;
-    /*background-color: #707a8c;*/
-    /*color: #adbcc5;*/
-    color: #c6dfef;
+    background-color: #707a8c;
+    color: #adbcc5;
 }
 .color-blue hr {
     border-color: #adbcc5;
